@@ -1,0 +1,31 @@
+{
+  "name": "erx",
+  "version": "1.0.0",
+  "main": "build/Main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "npm run build-cli-ts && npm run npm-live-server && npm run watch-ts",
+    "npm-live-server": "start live-server --watch=index.html,build/bundle.js,src/css/**",
+    "build-cli-ts": "browserify -p [ tsify ] src/ts/main.ts > build/bundle.js",
+    "build-cli-js": "browserify -p [ tsify --allowJs ] src/js/main.js > build/bundle.js",
+    "build-script": "node ./build.script.js > build/bundle.js",
+    "watch-ts": "watchify -p [ tsify ] src/ts/main.ts -o build/bundle.js --debug --verbose",
+    "watch-js": "watchify -p [ tsify --allowJs ] src/js/main.js -o build/bundle.js --debug --verbose",
+    "postinstall": "npm run build-cli-ts",
+    "start": "npm run run"
+  },
+  "author": "Thomas",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "live-server": "^1.2.0",
+    "budo": "^10.0.3",
+    "browserify": "^14.3.0",
+    "watchify":"^3.9.0",
+    "tsify":"^3.0.1",
+    "typescript": "^2.3.2"
+  }
+}
