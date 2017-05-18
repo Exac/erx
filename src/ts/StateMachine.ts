@@ -1,7 +1,7 @@
 /**
  * Created by Thomas on 2017-05-04.
  */
-import { State } from './State';
+import State from './State';
 
 export default class StateMachine {
     states: Map<string, State>;

@@ -8,7 +8,7 @@ export default class Entity {
     public xVel: number;
     public yVel: number;
 
-    update(c: CanvasRenderingContext2D) {
+    public update() {
         //console.info("%cE:u:start", faded);
         //console.info("%cE:u:end", faded);
     }

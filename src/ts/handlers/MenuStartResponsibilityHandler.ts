@@ -9,7 +9,7 @@ import ChainOfResponsibility from "../ChainOfResponsibility";
 export default class MenuStartResposibilityHandler extends ResponsibilityHandler {
     public execute (chain: ChainOfResponsibility, data: any) {
 
-        if(!chain.context.isPointInBackground(data)) {
+        if(!chain.context.isPointInStartButton(data)) {
             chain.context.close();//delegate changing state in view
             chain.stopPropagation();
         }

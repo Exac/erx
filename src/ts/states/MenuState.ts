@@ -2,8 +2,8 @@
  * Created by Thomas on 2017-05-04.
  */
 
-import { State } from "../State";
-import { View } from "../View";
+import State from "../State";
+import View from "../View";
 import ChainOfResponsibility from "../ChainOfResponsibility";
 import MenuCloseResposibilityHandler from "../handlers/MenuCloseResponsibilityHandler";
 import MenuStartResposibilityHandler from "../handlers/MenuStartResponsibilityHandler";

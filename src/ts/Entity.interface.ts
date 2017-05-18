@@ -8,7 +8,7 @@ interface Entity {
     xVel: number;
     yVel: number;
 
-    update(c: CanvasRenderingContext2D): void;
+    update(): void;
 }
 
 export default Entity;
